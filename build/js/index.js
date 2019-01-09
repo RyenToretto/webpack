@@ -67,26 +67,18 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1);
-module.exports = __webpack_require__(6);
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
-var _module = __webpack_require__(2);
+var _module = __webpack_require__(1);
 
-var _module2 = __webpack_require__(3);
+var _module2 = __webpack_require__(2);
 
-var _data = __webpack_require__(4);
+var _data = __webpack_require__(3);
 
 var _data2 = _interopRequireDefault(_data);
 
-__webpack_require__(5);
+__webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -97,7 +89,7 @@ console.log((0, _module2.sum)(1, 2, 3, 4, 5, 6));
 console.log(_data2.default);
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -120,7 +112,7 @@ exports.add = add;
 exports.mul = mul;
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -142,22 +134,16 @@ function sum() {
 }
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 module.exports = {"name":"jack","age":18}
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-module.exports = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n    <head>\r\n        <meta charset=\"utf-8\">\r\n    </head>\r\n    <body>\r\n        \r\n        <div class=\"title\">\r\n            hello!webpack\r\n        </div>\r\n        \r\n        <div class=\"test1\"></div>\r\n        \r\n        <div class=\"test2\"></div>\r\n    </body>\r\n</html>\r\n";
 
 /***/ })
 /******/ ]);
