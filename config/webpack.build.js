@@ -15,7 +15,7 @@ module.exports = {
         rules: [
             {    // less 编译成 css,
                 test: /\.less$/,
-                use: ExtractTextPlugin.extract({
+                use: ExtractTextPlugin.extract({    // 将 css 抽取成一个文件，并引入 html 文件
                     fallback: "style-loader",
                     use: ["css-loader", "less-loader"]
                 })
