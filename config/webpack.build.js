@@ -81,12 +81,5 @@ module.exports = {
         new CleanWebpackPlugin("./build", {
             root: resolve(__dirname, "../")    // 修改默认 root 目录 "./" 为 "../"
         })    // 用来清空 build 文件夹 的插件
-    ],
-    
-    devServer: {    // 以后用的就这么几个配置
-        hot: true,    // 模块热更新 (热模替换, 也称 HMR)
-        open: true,
-        port: 3001,
-        compress: true
-    }
+    ]
 };

@@ -6,10 +6,12 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: ["./src/js/index.js", "./src/index.html"],
+    
     output: {
-        path: resolve(__dirname, '../build/'),    // 输出到 webpack.build.js 同级的 build/
+        path: resolve(__dirname, '../dev/'),    // 输出到 webpack.build.js 同级的 build/
         filename: "./js/index.js"    // js 输出文件 build/
     },
+    
     module: {
         rules: [
             {    // dev 环境下使用传统的 loader 处理 css
@@ -27,7 +29,7 @@ module.exports = {
                         loader: "url-loader",
                         options:{
                             outputPath: './img',    // build/
-                            publicPath: '../img',    // build/css/styles.css
+                            publicPath: './img',    // build/css/styles.css
                             name:'[hash:5].[ext]',
                             limit: 8192
                         }
@@ -81,5 +83,12 @@ module.exports = {
             root: resolve(__dirname, "../")    // 修改默认 root 目录 "./" 为 "../"
         }),    // 用来清空 build 文件夹 的插件
         new webpack.HotModuleReplacementPlugin()    // 热模更新 支持插件
-    ]
+    ],
+    
+    devServer: {    // 以后用的就这么几个配置
+        hot: true,    // 模块热更新 (热模替换, 也称 HMR)
+        open: true,
+        port: 3001,
+        compress: true
+    }
 };
